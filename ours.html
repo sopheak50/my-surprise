@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loving you</title>
+    <link rel="icon" href="https://sopheak50.github.io/my-surprise/asset/images/heartballoon.jpg" />
+    <link rel="stylesheet" href="https://sopheak50.github.io/my-surprise/asset/css/style.css" />
+    <link rel="stylesheet" href="https://sopheak50.github.io/my-surprise/asset/css/balloons.css" />
+  </head>
+  <body>
+    <div >
+    <div class="title">
+      <h1>Congratulation!! now you are with me na o sml🥰😝</h1>
+    </div>
+
+    <div style="position: relative; top: 4vh">
+      <img
+        src="https://sopheak50.github.io/my-surprise/asset/images/1.jpg"
+        alt="Image 1"
+        class="image-float md"
+        style="top: 0vh; left: 10%"
+      />
+      <img
+        src="https://sopheak50.github.io/my-surprise/asset/images/2.jpg"
+        alt="Image 1"
+        class="image-float md"
+        style="top: -3vh; left: 26%"
+      /><img
+        src="https://sopheak50.github.io/my-surprise/asset/images/3.jpg"
+        alt="Image 1"
+        class="image-float md"
+        style="top: -5vh; left: 43%"
+      /><img
+        src="https://sopheak50.github.io/my-surprise/asset/images/4.jpg"
+        alt="Image 1"
+        class="image-float md"
+        style="top: -3vh; left: 60%"
+      /><img
+        src="https://sopheak50.github.io/my-surprise/asset/images/5.jpg"
+        alt="Image 1"
+        class="image-float md"
+        style="top: 0vh; left: 80%"
+      />
+    </div>
+
+    <div style="position: relative; top: 0vh">
+      <img
+        src="https://sopheak50.github.io/my-surprise/asset/images/6.jpg"
+        alt="Image 1"
+        class="image-float sm"
+        style="top: 45vh; left: 7%"
+      />
+
+      <img
+        src="https://sopheak50.github.io/my-surprise/asset/images/7.jpg"
+        alt="Image 1"
+        class="image-float md"
+        style="top: 45vh; left: 18%"
+      />
+
+      <img
+        src="https://sopheak50.github.io/my-surprise/asset/images/center.jpg"
+        alt="Image 1"
+        class="image-float lg"
+        style="top: 26vh; left: 38%; z-index: 99"
+      />
+
+      <img
+        src="https://sopheak50.github.io/my-surprise/asset/images/8.jpg"
+        alt="Image 1"
+        class="image-float md"
+        style="top: 34vh; left: 63%"
+      />
+
+      <img
+        src="https://sopheak50.github.io/my-surprise/asset/images/9.jpg"
+        alt="Image 1"
+        class="image-float sm"
+        style="top: 47vh; left: 80%"
+      />
+    </div>
+    <div id="balloon-container"></div>
+
+    <img src="https://sopheak50.github.io/my-surprise/asset/images/heartballoon.jpg" alt="" class="bg-image" />
+  </div>
+  </body>
+</html>
+
+<script>
+  const balloonContainer = document.getElementById("balloon-container");
+
+  function random(num) {
+    return Math.floor(Math.random() * num);
+  }
+
+  function getRandomStyles() {
+    var r = random(255);
+    var g = random(206);
+    var b = random(104);
+    var mt = random(200);
+    var ml = random(50);
+    var dur = random(5) + 5;
+    return `
+  background-color: rgba(${r},${g},${b},0.9);
+  color: rgba(${r},${g},${b},0.9); 
+  box-shadow: inset -7px -3px 10px rgba(${r - 10},${g - 10},${b - 10},0.1);
+  margin: ${mt}px 0 0 ${ml}px;
+  animation: float ${dur}s ease-in infinite
+  `;
+  }
+
+  function createBalloons(num) {
+    for (var i = num; i > 0; i--) {
+      var balloon = document.createElement("div");
+      balloon.className = "balloon";
+      balloon.style.cssText = getRandomStyles();
+      balloonContainer.append(balloon);
+    }
+  }
+
+  function removeBalloons() {
+    balloonContainer.style.opacity = 0;
+    setTimeout(() => {
+      balloonContainer.remove();
+    }, 500);
+  }
+
+  window.addEventListener("load", () => {
+    createBalloons(30);
+  });
+
+  window.addEventListener("click", () => {
+    window.location.href = "https://sopheak50.github.io/my-surprise/sorry.html";
+  });
+</script>
