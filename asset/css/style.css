@@ -30,15 +30,15 @@
 }
 
 .image-float.sm {
-  width: 8vw;
+  width: 18vw;
 }
 
 .image-float.md {
-  width: 15vw;
+  width: 20vw;
 }
 
 .image-float.lg {
-  width: 20vw;
+  width: 40vw;
 }
 
 .title {
