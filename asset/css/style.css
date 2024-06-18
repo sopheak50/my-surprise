@@ -1,0 +1,126 @@
+@keyframes float-balloon {
+  0% {
+    transform: translateY(0px);
+  } /* Start at initial position */
+  25% {
+    transform: translateY(-10px);
+  } /* Slight upward movement */
+  50% {
+    transform: translateY(0px);
+  } /* Return to initial position */
+  75% {
+    transform: translateY(10px);
+  } /* Slight downward movement */
+  100% {
+    transform: translateY(0px);
+  } /* Return to initial position */
+}
+
+.image-float {
+  position: absolute; /* Absolute positioning for precise control */
+  width: 200px; /* Set the image width */
+  top: 100px; /* Initial position from the top */
+  left: 50%; /* Center the image horizontally */
+  transform: translateX(-50%); /* Adjust horizontal centering if needed */
+  animation: float-balloon 3s ease-in-out infinite alternate; /* Animation properties */
+  margin-top: 80px;
+  border: 5px solid black;
+  border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23cffffe' /%3E%3Cstop offset='25%25' stop-color='%23f9f7d9' /%3E%3Cstop offset='50%25' stop-color='%23fce2ce' /%3E%3Cstop offset='100%25' stop-color='%23ffc1f3' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3'/%3E %3C/svg%3E")
+    1;
+}
+
+.image-float.sm {
+  width: 8vw;
+}
+
+.image-float.md {
+  width: 15vw;
+}
+
+.image-float.lg {
+  width: 20vw;
+}
+
+.title {
+  width: 100vw;
+  z-index: 0;
+  position: absolute;
+  color: #8dd9cc;
+  text-align: center;
+  font-size: 13px;
+  /* margin: 0 auto; */
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  background: #ffffff;
+  background-image: radial-gradient(#ffc3f1 5%, transparent 0);
+  background-size: 35px 35px;
+  z-index: 1;
+}
+
+.bg-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 30%;
+  z-index: -1;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#yes-button {
+  width: 138px;
+  margin: 10px auto;
+  background-color: #ffbef0; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+#no-button {
+  width: 200px;
+  margin: 10px auto;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  background:gray;
+  border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23cffffe' /%3E%3Cstop offset='25%25' stop-color='%23f9f7d9' /%3E%3Cstop offset='50%25' stop-color='%23fce2ce' /%3E%3Cstop offset='100%25' stop-color='%23ffc1f3' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3'/%3E %3C/svg%3E")
+    2;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+textarea, .sorry {
+  text-align: center;
+  font-family: cursive;
+  font-size: 24px;
+  border: 10px solid black;
+  padding: 2rem 1rem;
+  min-height: 3em;
+  width: 60%;
+  margin: 20px auto;
+  resize: both;
+  background: linear-gradient(
+    to top,
+    rgba(#cffffe, 0.3),
+    rgba(#f9f7d9, 0.3),
+    rgba(#fce2ce, 0.3),
+    rgba(#ffc1f3, 0.3)
+  );
+  border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23cffffe' /%3E%3Cstop offset='25%25' stop-color='%23f9f7d9' /%3E%3Cstop offset='50%25' stop-color='%23fce2ce' /%3E%3Cstop offset='100%25' stop-color='%23ffc1f3' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3'/%3E %3C/svg%3E")
+    1;
+}

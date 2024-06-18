@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Do you love me?</title>
+    <link rel="icon" href="/asset/images/heartballoon.jpg" />
+    <link rel="stylesheet" href="/asset/css/style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <textarea resize>Do you love me!!😅😅</textarea>
+    </div>
+    <div class="main">
+      <a id="yes-button" href="/index.html">YES</a>
+    </div>
+    <div class="main">
+      <input
+        id="no-button"
+        type="button"
+        value="NO"
+        onmouseover="hoverNoButton()"
+      />
+    </div>
+  </body>
+</html>
+<script>
+  //move button on hover
+  function hoverNoButton() {
+    // random from 0 to 1, then multiply with screen size
+    let x = Math.random() * (window.innerWidth - 250);
+    let y = Math.random() * (window.innerHeight - 250);
+
+    document.getElementById("no-button").style.position = "absolute";
+    document.getElementById("no-button").style.left = x + "px";
+    document.getElementById("no-button").style.top = y + "px";
+  }
+</script>
